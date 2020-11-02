@@ -1,33 +1,57 @@
 import React from 'react';
-import { SafeAreaView, Text, StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 
-const Textt = styled.Text`
-  color:${props=>props.color};
-  font-size:15px;
+const Page = styled.SafeAreaView`
+  flex: 1;
+  background-color: black;
+  
 `;
 
-const style = StyleSheet.create({
-  page:{
-    width:200,
-    height:200,
-    backgroundColor:'red'
-  },
-  text:{
-    color:'white'
-  }
-});
+const Header = styled.View`
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  height:200px;
+  background-color:#eee;
+  flex-wrap:wrap;
+`;
 
+const Square = styled.View`
+  width:50px;
+  height:50px;
+  background-color:${props => props.color};
+  font-size:30px;
+`;
 
 const TextoInit = () => {
   return (
-    <SafeAreaView style={style.page}>
-      <Text style={{color:'white', fontSize:25}}>Hello</Text>
-      <Text style={style.text}>Hello</Text>
-      <Textt color="white">Hello</Textt>
-      <Textt color="red">Hello</Textt>
-      <Textt color="black">Hello</Textt>
-    </SafeAreaView>
+    <Page>
+      <Header>
+        <Square  color='red'></Square>
+        <Square style={{alignSelf:'flex-end'}} color='green'></Square>
+        <Square  color='blue'></Square>
+      </Header>
+      <Header>
+        <Square  color='red'></Square>
+        <Square  color='green'></Square>
+        <Square  color='blue'></Square>
+        <Square  color='red'></Square>
+        <Square  color='green'></Square>
+        <Square  color='blue'></Square>
+        <Square  color='red'></Square>
+        <Square  color='green'></Square>
+        <Square  color='blue'></Square>
+        <Square  color='red'></Square>
+        <Square  color='green'></Square>
+        <Square  color='blue'></Square>
+        <Square  color='red'></Square>
+        <Square  color='green'></Square>
+        <Square  color='blue'></Square>
+        <Square  color='red'></Square>
+        <Square  color='green'></Square>
+        <Square  color='blue'></Square>
+      </Header>
+    </Page>
   )
 }
 
